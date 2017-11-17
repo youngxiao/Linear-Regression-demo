@@ -90,8 +90,8 @@ axarr[1].plot(climate_change_df['Year'], climate_change_df['Temperature'])
 axarr[1].set_xlabel('Year')
 axarr[1].set_ylabel('Relative temperature')
 ```
-<div align=center><img weight="400" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/co2.png"/></div>
-<div align=center><img weight="400" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/temp.png"/></div>
+<div align=center><img width="600" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/co2.png"/></div>
+<div align=center><img width="600" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/temp.png"/></div>
 
 3D线性回归并可视化结果
 ```
@@ -125,8 +125,8 @@ axarr[1].plot(x_line, p[1])
 axarr[1].set_xlabel('Year')
 axarr[1].set_ylabel('Relative temperature')
 ```
-<div align=center><img weight="400" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/co2.png"/></div>
-<div align=center><img weight="400" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/temp.png"/></div>
+<div align=center><img width="600" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/co2.png"/></div>
+<div align=center><img width="600" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/temp.png"/></div>
 
 ## 依赖的 packages
 * matplotlib
