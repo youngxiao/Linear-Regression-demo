@@ -90,8 +90,8 @@ axarr[1].plot(climate_change_df['Year'], climate_change_df['Temperature'])
 axarr[1].set_xlabel('Year')
 axarr[1].set_ylabel('Relative temperature')
 ```
-<div align=center><img height="150" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/co2.png"/></div>
-<div align=center><img height="175" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/temp.png"/></div>
+<div align=center><img weight="600" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/co2.png"/></div>
+<div align=center><img weight="600" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/temp.png"/></div>
 
 3D线性回归并可视化结果
 ```
@@ -113,17 +113,28 @@ ax.view_init(10, -45)
 ```
 <div align=center><img height="320" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/3D_regression.png"/></div>
 
-
-## Usage
-Run the jupyter notebook `linear_regression.ipynb`
-
-##Challenge
-> The challenge for this video is to use scikit-learn to create a line of best fit for the included 'challenge_dataset'. Then, make a prediction for an existing data point and see how close it matches up to the actual value. Print out the error you get. 
-
-> Bonus points if you perform linear regression on a dataset with 3 different variables
+将对二氧化碳和全球气温变化的预测分别在二维里面显示
+```
+f, axarr = plt.subplots(2, sharex=True)
+f.set_size_inches(12.5, 7.5)
+axarr[0].plot(climate_change_df['Year'], climate_change_df['CO2'])
+axarr[0].plot(x_line, p[0])
+axarr[0].set_ylabel('CO2 Emissions')
+axarr[1].plot(climate_change_df['Year'], climate_change_df['Temperature'])
+axarr[1].plot(x_line, p[1])
+axarr[1].set_xlabel('Year')
+axarr[1].set_ylabel('Relative temperature')
+```
+<div align=center><img weight="600" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/co2.png"/></div>
+<div align=center><img weight="600" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/temp.png"/></div>
 
 ## 依赖的 packages
 * matplotlib
 * pandas
 * numpy
 * seaborn
+
+## 欢迎关注
+* Github：https://github.com/youngxiao
+* Email： yxiao2048@gmail.com  or yxiao2017@163.com
+* Blog:   https://youngxiao.github.io
