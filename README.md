@@ -12,15 +12,16 @@
 
 ## Section 1: 2D 线性回归
 首先导入各种需要用到的 packages
-
-```%matplotlib inline
+```
+%matplotlib inline
 # Imports
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import pandas as pd
 import seaborn as sns
 import sklearn
-import numpy as np```
+import numpy as np
+```
 
 
 
