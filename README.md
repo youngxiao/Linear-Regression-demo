@@ -1,14 +1,14 @@
-<<<<<<< HEAD
-# Linear-Regression-demo
+# Linear Regression demo 线性回归小示例
 =======
-# linear-regression-sklearn
-2D and 3D multivariate regressing with sklearn applied to cimate change data  
-Winner of Siraj Ravel's [coding challange](https://youtu.be/vOppzHpvTiQ?t=7m31s)
+# 线性回归示例说明
+本示例是一个简单有趣的试验，是对天气变化的数据回归出一条预测线 出来，数据集非常简单，对应每一年二氧化碳的排放量，和每一年气温均值的变化，
+编译环境是 jupyter notebook， 可以通过安装  Anaconda，导入 scikit-learn 库可以很容易实现，[github示例代码数据集](https://github.com/youngxiao/Linear-Regression-demo)，有人上传视频到
+ [Youtube Video ](https://youtu.be/vOppzHpvTiQ?t=7m31s)，也可以看看。
 
-## Overview
-The notebook is split into two sections: 
-* 2D linear regression on a sample dataset [X, Y]
-* 3D multivariate linear regression on a climate change dataset [Year, CO2 emissions, Global temperature].
+## 概述
+`linear_regression.ipynb`代码中主要分为两个部分
+* 2D 线性回归作用于一个简单二维数据集 `challenge_dataset.txt` [X, Y]
+* 3D 多元线性回归作用于气候变化数据集 `global_co2.csv` [Year, CO2 emissions, Global temperature].
 
 Because of the small amount of data, and the random 10% of data chosen for testing, the scores have high variance.  
 
