@@ -22,8 +22,12 @@ import seaborn as sns
 import sklearn
 import numpy as np
 ```
-
-
+导入可视化二维数据
+```
+df = pd.read_csv('challenge_dataset.txt', names=['X','Y'])
+sns.regplot(x='X', y='Y', data=df, fit_reg=False)
+plt.show()
+```
 
 ## Section 2: 3D 线性回归
 
