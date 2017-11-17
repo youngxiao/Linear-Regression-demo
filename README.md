@@ -28,10 +28,10 @@ df = pd.read_csv('challenge_dataset.txt', names=['X','Y'])
 sns.regplot(x='X', y='Y', data=df, fit_reg=False)
 plt.show()
 ```
-<div align=center><img height="350" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/2D_data.png"/></div>
+<div align=center><img height="320" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/2D_data.png"/></div>
 
 2D 线性回归及回归后的可视化结果
-<div align=center><img height="350" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/2D_regression.png"/></div>
+<div align=center><img height="320" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/2D_regression.png"/></div>
 
 
 ## Section 2: 3D 线性回归
@@ -78,7 +78,22 @@ ax.scatter(xs=climate_change_df['Year'], ys=climate_change_df['Temperature'], zs
 ax.set_ylabel('Relative tempature'); ax.set_xlabel('Year'); ax.set_zlabel('CO2 Emissions')
 ax.view_init(10, -45)
 ```
-<div align=center><img height="350" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/3D_data.png"/></div>
+<div align=center><img height="320" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/3D_data.png"/></div>
+
+将二氧化碳排放和全球温度变化分别用二维显示
+```
+f, axarr = plt.subplots(2, sharex=True)
+f.set_size_inches(12.5, 7.5)
+axarr[0].plot(climate_change_df['Year'], climate_change_df['CO2'])
+axarr[0].set_ylabel('CO2 Emissions')
+axarr[1].plot(climate_change_df['Year'], climate_change_df['Temperature'])
+axarr[1].set_xlabel('Year')
+axarr[1].set_ylabel('Relative temperature')
+```
+<div align=center><img height="250" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/co2.png"/></div>
+<div align=center><img height="250" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/temp2.png"/></div>
+
+
 
 
 ## Usage
