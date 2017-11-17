@@ -90,10 +90,28 @@ axarr[1].plot(climate_change_df['Year'], climate_change_df['Temperature'])
 axarr[1].set_xlabel('Year')
 axarr[1].set_ylabel('Relative temperature')
 ```
-<div align=center><img height="250" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/co2.png"/></div>
-<div align=center><img height="250" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/temp2.png"/></div>
+<div align=center><img height="150" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/co2.png"/></div>
+<div align=center><img height="175" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/temp.png"/></div>
 
-
+3D线性回归并可视化结果
+```
+X = climate_change_df.as_matrix(['Year'])
+Y = climate_change_df.as_matrix(['CO2', 'Temperature']).astype('float32')
+X_train, X_test, y_train, y_test = np.asarray(train_test_split(X, Y, test_size=0.1))
+reg = LinearRegression()
+reg.fit(X_train, y_train)
+print('Score: ', reg.score(X_test.reshape(-1, 1), y_test))
+x_line = np.arange(1960,2011).reshape(-1,1)
+p = reg.predict(x_line).T
+fig2 = plt.figure()
+fig2.set_size_inches(12.5, 7.5)
+ax = fig2.add_subplot(111, projection='3d')
+ax.scatter(xs=climate_change_df['Year'], ys=climate_change_df['Temperature'], zs=climate_change_df['CO2'])
+ax.set_ylabel('Relative tempature'); ax.set_xlabel('Year'); ax.set_zlabel('CO2 Emissions')
+ax.plot(xs=x_line, ys=p[1], zs=p[0], color='green')
+ax.view_init(10, -45)
+```
+<div align=center><img height="320" src="https://github.com/youngxiao/Linear-Regression-demo/raw/master/result/3D_regression.png"/></div>
 
 
 ## Usage
